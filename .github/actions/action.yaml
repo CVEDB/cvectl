@@ -1,0 +1,23 @@
+name: cvectl-lint
+runs:
+  using: composite
+
+  steps:
+    - uses: actions/checkout@ac593985615ec2ede58e132d2e21d2b1cbd6127c # v3.3.0
+      with:
+        repository: cvedb/cvectl
+        path: cvectl-setup-gha
+
+    - uses: actions/setup-go@6edd4406fa81c3da01a34fa6f6343087c207a568 # v3.5.0
+      with:
+        go-version: '1.21'
+        check-latest: true
+
+    - id: build
+      shell: bash
+      run: |
+        cd cvectl-setup-gha
+        make cvectl
+        mv cvectl /home/runner/go/bin/
+        cd ..
+        rm -rf cvectl-setup-gha

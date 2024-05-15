@@ -1,0 +1,1 @@
+{"modified":"2023-05-04T14:34:34Z","id":"CVEDB-GHSA-232p-vwff-86mp","aliases":["GHSA-232p-vwff-86mp"],"affected":[{"package":{"ecosystem":"cvedb","name":"ko","purl":"pkg:apk/cvedb/ko"},"ranges":[{"type":"ECOSYSTEM","events":[{"introduced":"0"},{"fixed":"0.13.0-r3"}]}]}]}

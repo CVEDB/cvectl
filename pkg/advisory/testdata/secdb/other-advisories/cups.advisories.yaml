@@ -1,0 +1,43 @@
+schema-version: "2"
+
+package:
+  name: cups
+
+advisories:
+  - id: CVE-2022-44444
+    events:
+      - timestamp: 2022-10-25T13:38:24-04:00
+        type: fixed
+        data:
+          fixed-version: 2.4.2-r0
+      - timestamp: 2022-11-25T13:38:24-04:00
+        type: false-positive-determination
+        data:
+          type: component-vulnerability-mismatch
+
+  - id: CVE-2022-55555
+    events:
+      - timestamp: 2022-10-25T14:38:24-04:00
+        type: fixed
+        data:
+          fixed-version: 2.5.0-r0
+      - timestamp: 2022-10-25T13:38:24-04:00
+        type: false-positive-determination
+        data:
+          type: component-vulnerability-mismatch
+
+  - id: CVE-2022-26691
+    events:
+      - timestamp: 2022-10-25T13:38:24-04:00
+        type: fixed
+        data:
+          fixed-version: 2.4.2-r0
+
+  - id: CVE-2022-33333
+    events:
+      - timestamp: 2022-10-25T13:38:24-04:00
+        type: fixed
+        data:
+          fixed-version: 2.4.2-r0
+      - timestamp: 2022-11-25T13:38:24-04:00
+        type: true-positive-determination

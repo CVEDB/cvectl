@@ -1,0 +1,15 @@
+.idea/
+cvectl
+.bin/
+.vscode
+
+dist/
+
+packages/*
+melange-cache/*
+local-melange.rsa*
+melange.rsa*
+dag.svg
+.idea
+.packagerules
+.melange.k8s.yaml

@@ -1,0 +1,49 @@
+## cvectl bump
+
+Bumps the epoch field in melange configuration files
+
+### Usage
+
+```
+cvectl bump [flags] config[.yaml] [config[.yaml]...]
+```
+
+### Synopsis
+
+Bumps the epoch field in melange configuration files
+
+The bump subcommand increments version numbers in package config files.
+For now it will only bump epoch numbers but a future version will
+allow users to control versions expressed in semver.
+
+cvectl bump can take a filename, a package or a file glob, increasing
+the version in each matching configuration file:
+
+    cvectl bump zlib.yaml
+    cvectl bump openssl
+    cvectl bump lib*.yaml
+
+The command assumes it is being run from the top of the cvedb/os
+repository. To look for files in another location use the --repo flag.
+You can use --dry-run to see which versions will be bumped without
+modifying anything in the filesystem.
+
+
+
+### Examples
+
+cvectl bump openssh.yaml perl lib*.yaml
+
+### Options
+
+```
+      --dry-run       don't change anything, just print what would be done
+      --epoch         bump the package epoch (default true)
+  -h, --help          help for bump
+      --repo string   path to the cvedb/os repository (default ".")
+```
+
+### SEE ALSO
+
+* [cvectl](cvectl.md)	 - A CLI helper for developing Cvedb
+
